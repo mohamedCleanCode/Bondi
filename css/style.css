@@ -12,6 +12,11 @@ body {
 html {
   scroll-behavior: smooth;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 /* Start Navbar  */
 .navbar {
   background-color: var(--dark-color);
@@ -73,9 +78,10 @@ html {
 .main-title::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 20%;
-  width: 60%;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
   height: 1px;
   background-color: var(--green-color);
 }
@@ -109,3 +115,58 @@ html {
   text-transform: uppercase;
 }
 /* End Features  */
+
+/* Start Our Work  */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work ul li.active {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.our-work ul li:hover {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #33d1cc6b;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  font-size: 25px;
+  transform: translateX(calc(-100% - 5px));
+  transition: 0.3s;
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+/* End Our Work  */
+
+/* Start Stuff  */
+@media (max-width: 500px) {
+  .stuff .box {
+    flex-direction: column;
+  }
+  .stuff .box .btn {
+    margin-bottom: 20px;
+  }
+  .stuff .box .left {
+    text-align: center;
+  }
+}
+/* End Stuff  */
