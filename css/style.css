@@ -214,3 +214,24 @@ ul {
   outline: none;
 }
 /* End Subscribe  */
+
+/* Start Footer  */
+.footer {
+  background-color: var(--dark-color);
+}
+.footer .info p:first-child span {
+  font-weight: bold;
+  color: var(--green-color);
+}
+.footer .info p:last-child span {
+  font-weight: bold;
+  color: var(--yellow-color);
+}
+.footer .icons ul {
+  justify-content: space-between;
+}
+.footer .icons img {
+  width: 50px;
+  margin-right: 10px;
+}
+/* End Footer  */
